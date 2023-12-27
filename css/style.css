@@ -72,23 +72,22 @@
 
 /* general styles */
 
-  /*btn*/
-  .btn{
-    display: inline-block;
-    background: linear-gradient(to right,var(--LimeGreen), var(--BrightCyan));
-    padding: 14px 38px;
-    border-radius:  30px;
-    font-size: 13px;
-    color: #ffffff;
-    margin-left: auto;
-    white-space: nowrap;
-    transition: opacity .3s ease;
-    cursor: pointer;
-  }
+    /*btn*/
+    .btn{
+      background: linear-gradient(to right,var(--LimeGreen), var(--BrightCyan));
+      padding: 14px 38px;
+      border-radius:  30px;
+      font-size: 13px;
+      color: #ffffff;
+      margin-left: auto;
+      white-space: nowrap;
+      transition: opacity .3s ease;
+      cursor: pointer;
+    }
 
-  .btn:hover{
-    opacity: 0.8;
-  }
+    .btn:hover{
+      opacity: 0.8;
+    }
 
     /* ---------------- hero section --------*/
 

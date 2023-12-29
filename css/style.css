@@ -9,11 +9,12 @@
   --desktop-view-width: 144rem;
   }
 
+
+  /*resets*/
   html{
     font-size: 62.5%;
   }
 
-  /*resets*/
   body{
     font-size: 1.6rem;
     padding: 0;
@@ -28,13 +29,6 @@
     *::before,
     *:after{
       box-sizing: inherit;
-    }
-
-    section{
-      width: 100%;
-      max-width: 1440px;
-      margin: auto;
-      min-height: 100px;
     }
 
     h1,
@@ -70,10 +64,32 @@
       text-decoration: none;
     }
 
+    figure{
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+
+    img{
+      display: inline-block;
+    }
+
 /* general styles */
+
+    section{
+      width: 100%;
+      max-width: 1440px;
+      margin: auto;
+    }
+
+    .wrapper{
+      width: 77%;
+      margin: auto;
+    }
 
     /*btn*/
     .btn{
+      display: inline-block;
       background: linear-gradient(to right,var(--LimeGreen), var(--BrightCyan));
       padding: 14px 38px;
       border-radius:  30px;
@@ -89,20 +105,15 @@
       opacity: 0.8;
     }
 
-    /* ---------------- hero section --------*/
+/* --- HERO section --*/
 
-    /* MOBILE VIEW hero */
+/* HERO -- mobile view */
 
     .hero{
       container-type: inline-size;
       container-name: hero;
-      width: 100%;
-      max-width: 1440px;
-      margin: auto;
       text-align: center;
     }
-
-
 
     .hero-text h1{
       font-size: 4rem;
@@ -133,7 +144,7 @@
 
 
 
-    /* DESKTOP VIEW HERO section */
+/* HERO desktop*/
 
     @container hero (min-width: 700px){
 
@@ -174,9 +185,195 @@
       .hero-text p{
         font-size: calc(1.8rem - (((var(--desktop-view-width) - 100cqw) / 700) * 2)) !important;
         line-height: 1.5 !important;
-        margin: 0 0 calc(3.6rem - (((var(--desktop-view-width) - 100cqw) / 700) * 20)) !important;
+        margin: 0 0 calc(3.8rem - (((var(--desktop-view-width) - 100cqw) / 700) * 20)) !important;
 
       }
 
     }
+
+
+/* FEATURES section */
+
+/* mobile view*/
+
+.features{
+  margin-top: 8.8rem;
+  padding-top: 6.4rem;
+  padding-bottom: 2.5rem;
+  background-color: #f4f5f7;
+}
+
+.features *{
+  text-align: center;
+}
+
+.features-title{
+  margin-bottom: 2.5rem;
+}
+
+.features-intro{
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+/*items*/
+
+.items{
+  padding-top: 6.2rem;
+}
+
+.item{
+  margin-bottom: 2.7rem;
+}
+
+.item-title{
+  margin-top: 2.3rem;
+  font-size: 1.9rem;
+  padding-bottom: 2rem;
+}
+
+.item-text{
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+/* FEATURES -desktop view */
+
+@media screen and (min-width:700px){
+
+  .features{
+    margin-top: -9.4vw;
+    padding-bottom: 0;
+  }
+
+  .features *{
+    text-align: left;
+  }
+
+  .features .wrapper{
+    padding-bottom: 7.6rem;
+  }
+}
+
+.features-title{
+  font-size: 3.8rem;
+  margin-top: 0.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.features-intro{
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+
+
+.items{
+  display: grid;
+  gap: 2.5rem;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+}
+
+.item-header{
+  padding-bottom: 1rem;
+}
+
+.item-title{
+  font-size: 2.3rem;
+  margin-top: 2.7rem;
+}
+
+.item-text{
+  font-size: 1.6rem;
+  line-height: 1.7;
+  padding-top: 0.6rem;
+}
+
+
+
+/* above 1440px */
+
+@media screen and (min-width: 1441px){
+  .features{
+    margin-top: -135px !important;
+  }
+}
+
+/* ARTICLES */
+
+/* ARTICLES mobile view */
+.articles{
+  background-color: #fafafa;
+}
+
+.articles .articles-header{
+  font-size: 3.8rem;
+  color: var(--DarkBlue);
+  padding-top: 8.3rem;
+}
+
+.articles .items{
+  padding-top: 5rem;
+}
+
+.articles .item{
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(92, 87, 87, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.articles .item-header{
+  padding: 0;
+  margin: 0;
+  max-height: 197px;
+  overflow: hidden;
+}
+
+.articles .item > :not(.item-header) {
+  margin: 0 2rem;
+}
+
+.articles img{
+  display: block;
+  width: 100%;
+  aspect-ratio: 1275 / 1000;
+  max-height: 197px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.articles .item img{
+  transition: transform 400ms ease-in-out;
+}
+
+.articles .item:hover img,
+.articles .item:focus img{
+  transform: scale(1.1);
+}
+
+.articles .item-caption{
+  color: var(--GrayishBlue);
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.9rem !important;
+  margin-top: 2.5rem !important;
+}
+
+.articles .item-title{
+  font-size: 1.6rem;
+  color: var(--DarkBlue);
+  padding-bottom: 0.5rem;
+}
+
+.articles .item-text{
+  font-size: 1.4rem;
+  color: var(--GrayishBlue);
+  line-height: 1.2;
+  padding-bottom: 2rem;
+}
+
+/* ARTICLES desktop view*/
+
 

@@ -76,7 +76,9 @@
 
 /* general styles */
 
-    section{
+    section,
+    footer
+    {
       width: 100%;
       max-width: 1440px;
       margin: auto;
@@ -270,7 +272,6 @@
 
 .items{
   display: grid;
-  gap: 2.5rem;
   gap: 3rem;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
 }
@@ -374,6 +375,57 @@
   padding-bottom: 2rem;
 }
 
-/* ARTICLES desktop view*/
+/* cover for the articles' pictures */
 
+.cover-gallery{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 100;
+  transform: translateY(100%);
+}
 
+.cover-gallery > .inner{
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  background-color: var(--LightGrayishBlue);
+  padding: 30px;
+}
+
+.cover-gallery.show{
+  top: 0;
+  transform: translateY(0);
+}
+
+.cover-gallery button{
+  align-self: flex-start;
+}
+
+/* FOOTER */
+
+.footer > .wrapper{
+  display: flex;
+  background-color: var(--DarkBlue);
+}
+
+.footer-images{
+  flex: 1 1 28.5rem;
+}
+
+.footer-menu{
+  flex: 1 1 2.9rem;
+}
+
+.footer-contact{
+  flex: 1 1 53.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;;
+}

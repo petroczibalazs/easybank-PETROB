@@ -1,3 +1,4 @@
+/* VARIABLES  */
 :root{
   --DarkBlue: rgb(45, 49, 77);
   --LimeGreen: rgb(49, 211, 92);
@@ -64,14 +65,17 @@
       text-decoration: none;
     }
 
-    figure{
-      display: block;
+    img{
+      display: inline-block;
+    }
+
+    ul{
       padding: 0;
       margin: 0;
     }
 
-    img{
-      display: inline-block;
+    li{
+      list-style:  none;
     }
 
 /* general styles */
@@ -205,6 +209,11 @@
   background-color: #f4f5f7;
 }
 
+.features .wrapper{
+  width: 87%;
+  padding-bottom: 7.6rem;
+}
+
 .features *{
   text-align: center;
 }
@@ -239,24 +248,6 @@
   line-height: 1.8;
 }
 
-/* FEATURES -desktop view */
-
-@media screen and (min-width:700px){
-
-  .features{
-    margin-top: -9.4vw;
-    padding-bottom: 0;
-  }
-
-  .features *{
-    text-align: left;
-  }
-
-  .features .wrapper{
-    padding-bottom: 7.6rem;
-  }
-}
-
 .features-title{
   font-size: 3.8rem;
   margin-top: 0.6rem;
@@ -267,8 +258,6 @@
   font-size: 1.8rem;
   padding-bottom: 1rem;
 }
-
-
 
 .items{
   display: grid;
@@ -292,6 +281,25 @@
 }
 
 
+/* FEATURES  desktop */
+
+@media screen and (min-width:700px){
+
+  .features{
+    margin-top: -9.4vw;
+    padding-bottom: 0;
+  }
+
+  .features *{
+    text-align: left;
+   }
+
+  .features .wrapper{
+    width: 77%;
+   }
+}
+
+
 
 /* above 1440px */
 
@@ -303,12 +311,12 @@
 
 /* ARTICLES */
 
-/* ARTICLES mobile view */
 .articles{
   background-color: #fafafa;
+  padding-bottom: 4.8rem;
 }
 
-.articles .articles-header{
+.articles-header{
   font-size: 3.8rem;
   color: var(--DarkBlue);
   padding-top: 8.3rem;
@@ -343,6 +351,7 @@
   max-height: 197px;
   object-fit: cover;
   object-position: center;
+  cursor: pointer;
 }
 
 .articles .item img{
@@ -358,8 +367,8 @@
   color: var(--GrayishBlue);
   display: block;
   font-size: 1rem;
-  margin-bottom: 0.9rem !important;
-  margin-top: 2.5rem !important;
+  margin-bottom: 1.2rem !important;
+  margin-top: 2.8rem !important;
 }
 
 .articles .item-title{
@@ -373,6 +382,31 @@
   color: var(--GrayishBlue);
   line-height: 1.2;
   padding-bottom: 2rem;
+}
+
+/* ARTICLES mobile  */
+@media screen and (max-width: 700px){
+
+  .articles{
+    padding-bottom: 6.9rem;
+  }
+
+  .articles .wrapper{
+    width: 85%;
+  }
+
+  .articles-header{
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .articles .items{
+    padding-top: 3.5rem;
+  }
+
+  .articles .item > :not(.item-header){
+    margin: 0 3rem
+  }
 }
 
 /* cover for the articles' pictures */
@@ -410,22 +444,115 @@
 
 /* FOOTER */
 
+.footer{
+  background-color: var(--DarkBlue);
+  padding: 47px 0;
+}
+
 .footer > .wrapper{
   display: flex;
-  background-color: var(--DarkBlue);
+  gap: 3rem;
 }
 
 .footer-images{
-  flex: 1 1 28.5rem;
+  flex: 0 300 25.5rem;
+  display: flex;
+  flex-direction:  column;
+  justify-content: space-between;
+  align-items:  flex-start;
+}
+
+.footer-logo{
+  color: #fff;
+}
+
+.footer .social-icons{
+  display: flex;
+  align-items:  center;
+  gap: 1.35rem;
 }
 
 .footer-menu{
-  flex: 1 1 2.9rem;
+  flex: 0 500 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  height: 9.6rem;
+}
+
+.footer-menu a{
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 .footer-contact{
-  flex: 1 1 53.4rem;
+  flex: 1 0.5 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;;
+  align-items: flex-end;
+  justify-content: space-between;
 }
+
+.footer-copyright{
+  color: var(--LightGrayishBlue);
+  font-size: 1.4rem;
+  text-align: right;
+}
+
+/* FOOTER mobile */
+
+
+@media screen and (max-width: 700px){
+
+  .footer{
+    padding-top: 4rem;
+  }
+
+  .footer > .wrapper{
+    flex-direction: column;
+    justify-content:  flex-start;
+    align-items:  center;
+  }
+
+  .footer-images{
+    justify-content: flex-start;
+    align-items: center;
+    flex: auto;
+    gap: 3.4rem;
+  }
+
+
+  .footer .social-icons{
+    gap: 1.9rem;
+  }
+
+  .social-icons img{
+    transform: scale(1.2);
+  }
+
+
+  .footer-menu{
+    flex: auto;
+    height: auto;
+    gap: 1.7rem;
+    align-items: center;
+  }
+
+  .footer-contact{
+    flex: auto;
+    align-items: center;
+  }
+
+  .footer-contact .btn{
+    margin: 0 auto 3rem auto;
+  }
+
+
+}
+
+
+

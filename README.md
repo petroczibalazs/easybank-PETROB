@@ -35,7 +35,7 @@ Users should be able to:
 
 
 ### Links
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [See my solution HERE](https://petroczibalazs.github.io/easybank-PETROB/)
 
 ## My process
 - Aimed for maximum modularity in the solution, crafting distinct media queries for each component.

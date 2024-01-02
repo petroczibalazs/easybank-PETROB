@@ -7,6 +7,7 @@ This is a solution to the [Easybank landing page challenge on Frontend Mentor](h
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Links](#links)
+  - [Preview](#Preview)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -44,7 +45,8 @@ Users should be able to:
 - Initiated the project by addressing conspicuous elements, facilitating swift progress without delving too deep into the intricate details of the header section.
 - used chat gpt to improve the style of my texts in this markdown file 😉
 
-
+## Preview
+[preview](./images/page-preview.jpg)
 
 ### Built with
 

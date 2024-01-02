@@ -46,7 +46,7 @@ Users should be able to:
 - used chat gpt to improve the style of my texts in this markdown file 😉
 
 ## Preview
-[preview](./images/page-preview.jpg)
+![preview](./images/page-preview.jpg)
 
 ### Built with
 
